@@ -34,17 +34,17 @@ class AllRoute {
         GetPage(
           name: sendMoenyScreenRoute,
           page: () => SendView(),
-          binding: SendBinding()),
+          binding: SendBinding(repository: repository )),
                 GetPage(
           name: transactionScreenRoute,
           page: () => TransactionView(),
-          binding: TransactionBinding()),
+          binding: TransactionBinding(repository: repository)),
      
     ];
   }
 
-  static void routeTo({required String pageName, dynamic argument}) {
-    Get.toNamed(pageName, arguments: argument);
+  static Future<void> routeTo({required String pageName, dynamic argument}) async{
+  return  await Get.toNamed(pageName, arguments: argument);
   }
 
   static void routePopAndPushTo({required String pageName, dynamic argument}) {

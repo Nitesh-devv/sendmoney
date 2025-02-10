@@ -2,15 +2,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sendmoney/app/constant.dart';
 import 'package:sendmoney/app/localization/strings.dart';
 import 'package:sendmoney/data/provider/app_shared_preference.dart';
 import 'package:sendmoney/data/services/user_repository.dart';
 import 'package:sendmoney/modules/splash/splash_barral.dart';
 import 'package:sendmoney/navigation/routes.dart';
 
-void main() {
+void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.deleteBoxFromDisk(Constant.TRANSACTION_STORE_NAME);
+  await Hive.openBox<List>(Constant.TRANSACTION_STORE_NAME);
+  
    sharedPrefs.init().then((_) {
     runApp(const MyApp());
   });

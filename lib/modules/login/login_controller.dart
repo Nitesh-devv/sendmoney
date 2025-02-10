@@ -29,8 +29,7 @@ class LoginController extends GetxController {
       && passwordController.text.toString().toLowerCase() == Constant.OFFLINE_PASSWORD.toLowerCase()){
       Get.snackbar(Strings.lblLoginSucessTitle, Strings.lblLoginSucessMessage,
           snackPosition: SnackPosition.BOTTOM);
-        userRepository.userDetails = UserDetails(email: emailController.text.toString(), walletbalance: Constant.DEFAULT_MONEY);
-
+        userRepository.setUserLoggedIn(UserDetails(email: emailController.text.toString(), walletbalance: Constant.DEFAULT_MONEY));  
          AllRoute.routeOffAll(pageName:  AllRoute.homeScreenRoute, argument :null );
       }else{
       Get.snackbar(Strings.lblLoginInvalidTitle, Strings.lblLoginInvalidMsg,

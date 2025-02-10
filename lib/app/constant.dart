@@ -12,5 +12,7 @@ class Constant {
   static const String OFFLINE_EMAIL = "nitesh@gmail.com";
   static const String OFFLINE_PASSWORD = "nitesh";
 
+  static const String TRANSACTION_STORE_NAME = "transaction_send";
+
   static const String DEFAULT_MONEY = "400";
 }

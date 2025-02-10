@@ -18,17 +18,25 @@ class HomeController extends GetxController {
   }
 
   void onBackBtnClicked() {
-    Get.back();
+    Get.back();  
   }
 
 
-  void onSendMoneyBtnClicked(){
-      AllRoute.routeTo(pageName:  AllRoute.sendMoenyScreenRoute, argument :null );
+  void onSendMoneyBtnClicked() async{
+   await  AllRoute.routeTo(pageName:  AllRoute.sendMoenyScreenRoute, argument :null );
+        balance.value = int.parse(userRepository.userDetails!.walletbalance ?? "0");
+
 
   }
   void onViewTransactionBtnClicked(){
       AllRoute.routeTo(pageName:  AllRoute.transactionScreenRoute, argument :null );
     
+  }
+
+  void onLogoutBtnClicked(){
+    userRepository.clearUserDetails();
+          AllRoute.routeOffAll(pageName:  AllRoute.loginScreenRoute, argument :null );
+
   }
 
 

@@ -19,6 +19,9 @@ class SplashController extends GetxController {
     Future.delayed(const Duration(seconds: 2)).then((val) {
     // Your logic here 
         if(userRepository.isUserLoggedIn){
+          userRepository.setAutoLogin();
+         AllRoute.routeOffAll(pageName:  AllRoute.homeScreenRoute, argument :null );
+
     }else{
          AllRoute.routeOffAll(pageName:  AllRoute.loginScreenRoute, argument :null );
     }

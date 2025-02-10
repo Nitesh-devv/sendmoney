@@ -47,6 +47,10 @@ static const btnHomeSendMoeny = 'Send Money';
 static const btnHomeSendTransaction = 'View Transaction';
 
 
+//Send money screen
+static const btnSendMoneySubmit = "Submit";
+
+
 
 
   //Error and dialog text 
@@ -60,7 +64,13 @@ static const btnHomeSendTransaction = 'View Transaction';
   static const lblLoginInvalidMsg = "Please enter valid email and password";
 
 
+  static const lblSendMoenyValidAmountTitle = "Invalid amount";
+  static const lblSendMoenyValidAmountMsg = "Please inter valid amount";
+  static const lblSendMoenyTransactionSucessTitle = "Sucess";
+  static const lblSendMoenyTransactionSucessMsg = "Transaction Successful";
 
+  static const lblSendMoenyTransactionFailedTitle = "Failed";
+  static const lblSendMoenyTransactionFailed = "Transaction Failed";
 
 
 }

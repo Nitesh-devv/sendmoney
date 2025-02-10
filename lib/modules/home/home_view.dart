@@ -14,7 +14,19 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(Strings.lblAppName), backgroundColor: Colors.green,),
+      appBar: AppBar(title: Text(Strings.lblAppName), backgroundColor: Colors.green,
+      
+      actions: <Widget>[
+      PopupMenuButton<int>(
+          onSelected: (item) => controller.onLogoutBtnClicked(),
+          itemBuilder: (context) => [
+            PopupMenuItem<int>(value: 0, child: Text(Strings.lblLogout)),
+          ],
+        ),
+    ],
+      ),
+   
+   
         body:Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
