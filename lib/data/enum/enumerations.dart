@@ -1,0 +1,1 @@
+enum ObScreenType { type, info }
