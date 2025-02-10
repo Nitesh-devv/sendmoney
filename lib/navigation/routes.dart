@@ -30,7 +30,7 @@ class AllRoute {
                 GetPage(
           name: homeScreenRoute,
           page: () => HomeView(),
-          binding: HomeBinding()),
+          binding: HomeBinding(repository: repository)),
         GetPage(
           name: sendMoenyScreenRoute,
           page: () => SendView(),

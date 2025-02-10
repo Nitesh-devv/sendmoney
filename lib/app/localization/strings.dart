@@ -34,4 +34,33 @@ class Strings {
   static const lblLogout = "Logout";
 
 
+  //Login screen
+  static const lblLoginEmail = "Login";
+  static const lblLoginPassword = "Password";
+    static const btnLogin = "Login";
+
+
+//Home screen
+
+static const lblHomeBalancePrefix = "Balance:";
+static const btnHomeSendMoeny = 'Send Money';
+static const btnHomeSendTransaction = 'View Transaction';
+
+
+
+
+  //Error and dialog text 
+  static const lblLoginValidationErrorTitle = "Error";
+  static const lblLoginValidationErrorMsg  = "Please enter email and password"  ;
+
+  static const lblLoginSucessTitle = "Success";
+  static const lblLoginSucessMessage = "Login successful";
+
+  static const lblLoginInvalidTitle = "Failed";
+  static const lblLoginInvalidMsg = "Please enter valid email and password";
+
+
+
+
+
 }

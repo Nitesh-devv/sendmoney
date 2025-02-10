@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sendmoney/app/localization/strings.dart';
 import 'package:sendmoney/modules/transaction/transaction_controller.dart';
 
 class TransactionView extends GetView<TransactionController> {
@@ -10,6 +11,8 @@ class TransactionView extends GetView<TransactionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+            appBar: AppBar(title: Text(Strings.lblScreenTransaction), backgroundColor: Colors.green,),
+
         body: Text(
       "",
     ));
